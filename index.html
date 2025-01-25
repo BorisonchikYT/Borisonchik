@@ -3,82 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Название сайта</title>
+    <title>Аниме - Сладкий лимонад</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <div class="top-bar">
-            <h1 class="site-name">Название сайта</h1>
-            <nav>
-                <ul>
-                    <li><a href="#transitions">Переходы по клику</a></li>
-                    <li><a href="#profile">Профиль</a></li>
-                    <li><a href="#notifications">Уведомления</a></li>
-                    <li><a href="#search">Поиск</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="red-line"></div>
+        <h1>Аниме - Сладкий лимонад</h1>
+        <nav>
+            <ul>
+                <li><a href="#anime">Аниме</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#contact">Контакты</a></li>
+            </ul>
+        </nav>
     </header>
+    
+    <main>
+        <section id="anime" class="anime-info">
+            <div class="anime-content">
+                <img src="img1.jpg" alt="Сладкий лимонад" class="anime-image">
+                <div class="anime-description">
+                    <h2>Сладкий лимонад</h2>
+                    <p>Всю свою жизнь милашка Ука Исимори страдает от излишней застенчивости, у нее не получается сближаться с ровесниками. В средней школе Уке пришлось смириться с обидным прозвищем «камень», но в старшей школе такого точно не будет. Она сможет преодолеть свои комплексы и заведет новых друзей. Но весь запал улетучивается, когда девушку обливают газировкой в первый же учебный день. Инициатор происшествия – светловолосый Кай Миура – приносит невнятные извинения, но Ука не поверила в случайность и, расстроенная, сбежала домой.</p>
+                    <p>Вскоре Ука замечает, что Кай везде ходит за ней, ища возможность извиниться. Девушка видит в открытом и общительном Кае те качества, о которых мечтает она. Со временем они становятся хорошими друзьями. Кай прикладывает усилия, чтобы Ука наконец-то выбралась из своей скорлупы. Что же из этого получится?</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="video-player">
+            <h2>Смотреть Эпизод</h2>
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe>
+        </section>
 
-    <section class="carousel">
-        <h2>Популярные аниме</h2>
-        <!-- Здесь будет карусель -->
-        <div class="carousel-images">
-            <img src="https://via.placeholder.com/300x150" alt="Аниме 1">
-            <img src="https://via.placeholder.com/300x150" alt="Аниме 2">
-            <img src="https://via.placeholder.com/300x150" alt="Аниме 3">
-        </div>
-    </section>
+        <section class="image-gallery">
+            <h2 class="red-text">Галерея изображений</h2>
+            <img src="img1.jpg" alt="Изображение 1">
+            <img src="img2.jpg" alt="Изображение 2">
+            <img src="img3.jpg" alt="Изображение 3">
+            <img src="img4.jpg" alt="Изображение 4">
+        </section>
 
-    <section class="updates">
-        <div class="block">
-            <h2>Обновленное аниме</h2>
-            <ul>
-                <li>Аниме 1</li>
-                <li>Аниме 2</li>
-                <li>Аниме 3</li>
-            </ul>
-        </div>
-        <div class="block">
-            <h2>Расписание аниме</h2>
-            <ul>
-                <li>Пн: Аниме 1</li>
-                <li>Вт: Аниме 2</li>
-                <li>Ср: Аниме 3</li>
-            </ul>
-        </div>
-        <div class="block">
-            <h2>Недавно вышедшее аниме</h2>
-            <ul>
-                <li>Аниме 1</li>
-                <li>Аниме 2</li>
-                <li>Аниме 3</li>
-            </ul>
-        </div>
-    </section>
+        <section id="about" class="about">
+            <h2>О нас</h2>
+            <p>Мы - команда любителей аниме, стремящихся делиться своими увлечениями с другими. Наша цель - создать сообщество, где каждый может найти что-то интересное.</p>
+        </section>
 
-    <section class="new-anime">
-        <div class="new-block">
-            <h2>Новые аниме на сайте</h2>
-            <ul>
-                <li>Новое аниме 1</li>
-                <li>Новое аниме 2</li>
-            </ul>
-        </div>
-        <div class="filter-block">
-            <h2>Фильтр выбора аниме</h2>
-            <ul>
-                <li>По году</li>
-                <li>По жанру</li>
-                <li>По рейтингу</li>
-            </ul>
-        </div>
-    </section>
-
+        <section id="contact" class="contact">
+            <h2>Контакты</h2>
+            <p>Если у вас есть вопросы или предложения, свяжитесь с нами по электронной почте: info@anime.com</p>
+        </section>
+    </main>
+    
     <footer>
-        <p>Соглашение | Конфиденциальность | Для правообладателей © Название сайта 2017-2025</p>
+        <p>© 2023 Все права защищены.</p>
     </footer>
 </body>
 </html>
