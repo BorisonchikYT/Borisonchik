@@ -1,0 +1,118 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+}
+
+.container {
+    background: rgba(20, 20, 20, 0.8);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    max-width: 800px;
+    animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px #ff00ff, 0 0 10px #ff00ff;
+}
+
+nav {
+    margin: 20px 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #00ffcc;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff00ff;
+    transform: scale(1.1);
+}
+
+main {
+    margin: 20px 0;
+}
+
+.anime-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.anime-item {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 15px;
+    transition: transform 0.3s, background 0.3s;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.anime-item:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+}
+
+.anime-item h3 {
+    margin: 0;
+    font-size: 1.5em;
+    color: #ffcc00;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #888;
+    text-shadow: 0 0 5px #ff00ff;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .anime-item {
+        padding: 10px;
+    }
+}

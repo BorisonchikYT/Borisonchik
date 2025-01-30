@@ -1,0 +1,252 @@
+/* Общие стили */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1a1a2e, #16213e, #0f3460);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Стили для навигационной панели */
+.navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.site-title h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #00ffcc;
+    text-shadow: 0 0 15px rgba(0, 255, 204, 0.7);
+}
+
+.animated-text {
+    font-size: 1.5em;
+    animation: pulse 1.5s infinite;
+    color: #ff007f;
+}
+
+/* Анимация для текста */
+@keyframes pulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Стили для контейнера обсуждений */
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+}
+
+/* Стили для формы обсуждения */
+#discussion-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.discussion-input,
+.discussion-textarea {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 1em;
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.discussion-input:focus,
+.discussion-textarea:focus {
+    background: rgba(255, 255, 255, 0.2);
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+/* Кнопка */
+.btn {
+    padding: 15px;
+    background: linear-gradient(90deg, #00ffcc, #ff007f);
+    border: none;
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(90deg, #ff007f, #00ffcc);
+    box-shadow: 0 4px 20px rgba(0, 255, 204, 0.5);
+}
+
+/* Стили для обсуждений */
+.community {
+    margin-top: 20px;
+}
+
+.discussion {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+}
+
+.discussion:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 30px rgba(0, 255, 204, 0.5);
+}
+
+/* Заголовок обсуждения */
+.discussion-title {
+    font-size: 1.5em;
+    color: #00ffcc;
+    margin: 0;
+}
+
+/* Кнопки в обсуждении */
+.comment-btn, .edit-btn, .delete-btn, .report-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.comment-btn:hover, .edit-btn:hover, .delete-btn:hover, .report-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Комментарии */
+.comments {
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.3);
+    padding-top: 10px;
+}
+
+.comment {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background 0.3s ease;
+}
+
+.comment:hover {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Кнопки для комментариев */
+.comment-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.comment-btn, .edit-btn, .delete-btn, .report-btn {
+    background: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: none;
+    border-radius: 10px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.comment-btn:hover, .edit-btn:hover, .delete-btn:hover, .report-btn:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+/* Анимация для появления обсуждений */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Применение анимации к обсуждениям */
+.discussion {
+    animation: fadeIn 0.5s ease forwards;
+}
+
+/* Заголовок комментария */
+.comment-title {
+    font-weight: bold;
+    color: #00ffcc;
+}
+
+.comment-content {
+    margin-top: 5px;
+    color: #ffffff;
+}
+
+/* Стили для кнопки "Создать обсуждение" */
+.create-discussion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.create-discussion button {
+    margin-top: 10px;
+    padding: 10px 15px;
+}
+
+/* Адаптивные стили */
+@media (max-width: 600px) {
+    .navbar {
+        padding: 15px;
+    }
+
+    .site-title h1 {
+        font-size: 2em;
+    }
+
+    .animated-text {
+        font-size: 1.2em;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    .discussion-input,
+    .discussion-textarea {
+        font-size: 0.9em;
+    }
+
+    .btn {
+        font-size: 1em;
+    }
+
+    .discussion-title {
+        font-size: 1.3em;
+    }
+}

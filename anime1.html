@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Просмотр аниме - Безымянная память 2</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* Добавляем стили для снежинок */
+        .snowflake {
+            position: absolute;
+            top: -10px;
+            color: #ffffff;
+            font-size: 1em;
+            opacity: 0.8;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(100vh); }
+        }
+
+        /* Стили для навигации */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .navbar h1 {
+            margin: 0;
+        }
+
+        .divider {
+            height: 2px;
+            background-color: #fff;
+            margin: 10px 0;
+        }
+
+        /* Стили для блоков информации */
+        .info-block {
+            display: flex;
+            margin-bottom: 20px;
+        }
+
+        .info-block img {
+            max-width: 200px;
+            margin-right: 20px;
+        }
+
+        .info-details {
+            max-width: 600px;
+        }
+
+        /* Стили для видео контейнера */
+        .video-container {
+            margin-top: 20px;
+        }
+
+        /* Стили для кнопок */
+        .episode-buttons {
+            margin: 20px 0;
+        }
+
+        .episode-button {
+            margin-right: 10px;
+        }
+
+        footer {
+            margin-top: 20px;
+            padding: 10px;
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <h1 class="site-title animated-text">Безымянная память 2</h1>
+            <nav>
+                <ul>
+                    <li><a href="profile.html" style="color: white;">Профиль</a></li>
+                    <li><a href="#" id="logout" title="Выход">
+                        <img src="https://discords.com/_next/image?url=https%3A%2F%2Fcdn.discordapp.com%2Femojis%2F954951442282737698.png%3Fv%3D1&w=64&q=75" alt="Выход" style="width: 22px; height: 22px;">
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <div class="divider"></div>
+
+        <main>
+            <div class="info-block">
+                <img src="VV.jpg" alt="Постер" class="anime-image">
+                <div class="info-details">
+                    <h2>Информация о Дочь моей мачехи — моя бывшая девушка</h2>
+                    <p><strong>Тип:</strong> ТВ Сериал</p>
+                    <p><strong>Эпизоды:</strong> 12</p>
+                    <p><strong>Статус:</strong> Завершен</p>
+                    <p><strong>Жанр:</strong> Комедия, Романтика</p>
+                    <p><strong>Первоисточник:</strong> Легкая новелла</p>
+                    <p><strong>Сезон:</strong> Лето 2022</p>
+                    <p><strong>Выпуск:</strong> с 6 июля 2022 по 21 сентября 2022</p>
+                    <p><strong>Студия:</strong> Project No.9</p>
+                    <p><strong>Рейтинг MPAA:</strong> PG-13</p>
+                    <p><strong>Возрастные ограничения:</strong> 16+</p>
+                    <p><strong>Длительность:</strong> 23 мин. ~ серия</p>
+                    <p><strong>Озвучка:</strong> AniDUB, AniLibria, SHIZA Project, AniMedia, AnimeVost, AniStar, Субтитры</p>
+                    <p><strong>Снят по манге:</strong> Дочь моей мачехи — моя бывшая девушка</p>
+                    <p><strong>Главные герои:</strong> Юмэ Иридо (озвучивает Рина Хидака), Мидзуто Иридо (озвучивает Хиро Симоно)</p>
+                </div>
+            </div>
+
+            <h2 class="animated-text">Выберите эпизод:</h2>
+            <div class="episode-buttons">
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 1</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 2</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 3</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY4')">Эпизод 4</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 5</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 6</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 7</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 8</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 9</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 10</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 11</button>
+                <button class="episode-button" onclick="changeEpisode('https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY')">Эпизод 12</button>
+            </div>
+
+            <div class="video-container">
+                <iframe id="videoPlayer" src="https://youtu.be/Mk8kmqA0_Vw?si=HSzZl3pNRHTn7mmY" frameborder="0" allowfullscreen></iframe>
+            </div>
+        </main>
+    
+        <footer>
+            <div class="divider"></div>
+            <p>&copy; 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        function changeEpisode(url) {
+            const videoPlayer = document.getElementById("videoPlayer");
+            videoPlayer.src = url;
+        }
+        
+        function createSnowflakes() {
+            const snowflakeCount = 100; // Количество снежинок
+            const container = document.querySelector('.container'); // Находим контейнер
+            for (let i = 0; i < snowflakeCount; i++) {
+                const snowflake = document.createElement('div');
+                snowflake.classList.add('snowflake');
+                snowflake.innerHTML = '❄'; // Символ снежинки
+                snowflake.style.left = Math.random() * 100 + 'vw'; // Случайное положение по горизонтали
+                snowflake.style.animationDuration = Math.random() * 3 + 2 + 's'; // Случайная скорость падения
+                snowflake.style.fontSize = Math.random() * 1 + 0.5 + 'em'; // Случайный размер
+                container.appendChild(snowflake); // Добавляем снежинку в контейнер
+            }
+        }
+        
+        window.onload = function() {
+            createSnowflakes(); // Запускаем функцию при загрузке страницы
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <style>
+        /* Добавьте свои стили здесь */
+    </style>
+</head>
+<body>
+    <h1>Добро пожаловать на страницу профиля!</h1>
+    <p>Ваше имя: <span id="usernameDisplay"></span></p>
+    <p>Ваша электронная почта: <span id="emailDisplay"></span></p>
+
+    <script>
+        function checkAccess() {
+            const loggedInUser  = localStorage.getItem('loggedInUser ');
+            if (!loggedInUser ) {
+                window.location.href = 'index.html'; // Перенаправление на главную страницу
+            } else {
+                const user = JSON.parse(loggedInUser );
+                document.getElementById('welcomeUsername').textContent = user.username; // Отображение имени пользователя
+                document.getElementById('usernameDisplay').textContent = user.username;
+                document.getElementById('emailDisplay').textContent = user.email;
+                document.getElementById('loginCount').textContent = user.loginCount || 0; // Отображение количества входов
+            }
+        }
+
+        // Логика выхода
+        document.getElementById('logout').addEventListener('click', function(event) {
+            event.preventDefault(); // Предотвращаем переход по ссылке
+            localStorage.removeItem('loggedInUser '); // Удаление информации о вошедшем пользователе
+            window.location.href = 'index.html'; // Перенаправление на главную страницу
+        });
+
+        // Логика показа/скрытия пароля
+        document.getElementById('togglePassword').addEventListener('click', function() {
+            const passwordDisplay = document.getElementById('passwordDisplay');
+            if (passwordDisplay.textContent === '********') {
+                // Получаем пароль из localStorage, если он там хранится
+                const user = JSON.parse(localStorage.getItem('loggedInUser '));
+                passwordDisplay.textContent = user.password || '********'; // Показываем пароль или скрываем
+                this.textContent = 'Скрыть';
+            } else {
+                passwordDisplay.textContent = '********';
+                this.textContent = 'Показать';
+            }
+        });
+
+        // Вызов функции проверки доступа
+        checkAccess();
+
+        // Получаем массив пользователей из localStorage
+        let users = JSON.parse(localStorage.getItem('users')) || [];
+
+        // Проверяем, есть ли зарегистрированные пользователи
+        if (users.length === 0) {
+            // Если пользователей нет, перенаправляем на страницу регистрации
+            window.location.href = 'index.html'; // Замените 'index.html' на путь к вашей странице регистрации
+        }
+
+        // Получаем имя пользователя из localStorage
+        const loggedInUser  = localStorage.getItem('loggedInUser ');
+        if (loggedInUser ) {
+            const user = users.find(user => user.username === loggedInUser );
+            if (user) {
+                // Отображение информации о пользователе
+                document.getElementById('usernameDisplay').textContent = user.username;
+                document.getElementById('emailDisplay').textContent = user.email;
+            } else {
+                // Если имя пользователя не найдено, перенаправляем на страницу регистрации
+                window.location.href = 'index.html'; // Замените 'index.html' на путь к вашей странице регистрации
+            }
+        } else {
+            // Если имя пользователя не найдено, перенаправляем на страницу регистрации
+            window.location.href = 'index.html'; // Замените 'index.html' на путь к вашей странице регистрации
+        }
+    </script>
+</body>
+</html>

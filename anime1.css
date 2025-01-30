@@ -1,0 +1,140 @@
+body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    font-family: 'Arial', sans-serif;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    position: relative;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    animation: fadeIn 1s;
+}
+
+.site-title {
+    font-size: 24px;
+    animation: glitch 1.5s infinite;
+}
+
+.navbar nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    position: relative;
+}
+
+.navbar nav ul li a {
+    color: #00ffcc;
+    text-decoration: none;
+    transition: color 0.3s, transform 0.3s;
+    font-size: 18px;
+}
+
+.navbar nav ul li a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.main-content {
+    margin-top: 20px;
+    animation: slideIn 1s forwards;
+}
+
+.message {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #00ffcc;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 20px 0;
+    animation: fadeIn 1s;
+}
+
+.episode-button {
+    background-color: #00ffcc;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.episode-button:hover {
+    background-color: #ffcc00;
+    transform: scale(1.1);
+}
+
+.video-container {
+    margin-top: 20px;
+    border: 2px solid #00ffcc;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 255, 204, 0.5);
+}
+
+iframe {
+    width: 100%;
+    height: 500px;
+    border: none;
+}
+
+footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #ccc;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes glitch {
+    0% { text-shadow: 1px 1px #ff0000; }
+    20% { text-shadow: -1px -1px #00ffcc; }
+    40% { text-shadow: 1px 1px #ff0000; }
+    60% { text-shadow: -1px -1px #00ffcc; }
+    80% { text-shadow: 1px 1px #ff0000; }
+    100% { text-shadow: -1px -1px #00ffcc; }
+}
+
+/* Snow Animation */
+.snowflake {
+    position: absolute;
+    top: -10px;
+    color: #ffffff;
+    font-size: 1em;
+    opacity: 0.8;
+    animation: fall linear infinite;
+}
+
+@keyframes fall {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(100vh); }
+}

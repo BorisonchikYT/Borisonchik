@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles7.css">
+    <title>Обсуждения</title>
+</head>
+<body>
+    <header class="navbar">
+        <div class="site-title">
+            <h1>Обсуждения</h1>
+        </div>
+        <h2 class="animated-text">Оставьте ваше мнение</h2>
+    </header>
+    
+    <div class="container">
+        <form id="discussion-form">
+            <input type="text" id="discussion-title" class="discussion-input" placeholder="Заголовок обсуждения" required>
+            <textarea id="discussion-content" class="discussion-textarea" placeholder="Содержание обсуждения" required></textarea>
+            <button type="submit" class="btn">Создать обсуждение</button>
+        </form>
+        
+        <div id="discussions" class="community"></div>
+    </div>
+
+    <script src="forum2.js"></script>
+</body>
+</html>

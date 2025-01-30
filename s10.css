@@ -1,0 +1,235 @@
+/* s10.css */
+
+/* Общие стили */
+body {
+    font-family: 'Verdana', sans-serif;
+    background: url('https://example.com/path/to/your/anime-background.jpg') no-repeat center center fixed; /* Замени на выбранный фон */
+    background-size: cover;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* Скрыть скролл для анимации снега */
+    position: relative;
+}
+
+/* Анимация введения текста */
+h1, h2 {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+h1 {
+    font-size: 3em;
+    margin: 20px 0;
+}
+
+/* Анимации появления */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Заголовок */
+header {
+    background-color: rgba(76, 175, 80, 0.8); /* Полупрозрачный фон */
+    padding: 20px;
+    text-align: center;
+    border-radius: 0 0 10px 10px;
+}
+
+.title {
+    margin: 0;
+    animation-delay: 0.5s;
+}
+
+/* Контейнер для формы */
+.container {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    animation: slideIn 0.5s forwards; /* Анимация появления блока */
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Стили для форм */
+form {
+    display: flex;
+    flex-direction: column;
+    animation: fadeIn 1s forwards;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    margin-bottom: 15px;
+    padding: 10px;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border 0.3s;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border: 1px solid #4CAF50;
+}
+
+/* Кнопка */
+button {
+    padding: 10px;
+    background-color: #4CAF50; /* Цвет кнопки */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Затемнение кнопки при наведении */
+}
+
+/* Сообщение о ошибке */
+#errorMessage {
+    font-size: 14px;
+    text-align: center;
+    color: #f44336; /* Красный */
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background-color: rgba(241, 241, 241, 0.8); /* Полупрозрачный футер */
+    position: relative;
+}
+
+/* Снег */
+.snow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.7;
+    animation: snow-fall 10s linear infinite;
+}
+
+@keyframes snow-fall {
+    0% { background: url('path/to/your/snow.png') repeat; background-size: 100px; }
+    100% { background: url('path/to/your/snow.png') repeat; background-size: 200px; }
+}
+
+/* Приветствие */
+#welcomeMessage {
+    text-align: center;
+}
+
+/* Динамичная анимация текста */
+.dynamic-text {
+    display: inline-block;
+    animation: typing 2s steps(30, end), blink-caret .75s step-end infinite;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 3px solid;
+    font-size: 1.5em;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(255, 255, 255, 1); }
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.modal {
+    display: none; /* Скрыто по умолчанию */
+    position: fixed; /* Прилеплено к экрану */
+    z-index: 1; /* Наверх всех других элементов */
+    left: 0;
+    top: 0;
+    width: 100%; /* Полная ширина */
+    height: 100%; /* Полная высота */
+    overflow: auto; /* Включает прокрутку если нужно */
+    background-color: rgba(255, 0, 0, 0.8); /* Красный полупрозрачный фон */
+    animation: fadeIn 0.5s; /* Анимация появления */
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto; /* 15% от верхней границы и автоматический отступ слева и справа */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Ширина */
+    border-radius: 10px; /* Скругленные углы */
+    animation: slideIn 0.5s; /* Анимация появления */
+}
+
+@keyframes slideIn {
+    from { margin-top: -300px; opacity: 0; }
+    to { margin-top: 0; opacity: 1; }
+}
+
+.close-button {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close-button:hover,
+.close-button:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}

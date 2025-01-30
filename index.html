@@ -3,74 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Аниме Сайт</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Аниме Вход/Регистрация</title>
+    <link rel="stylesheet" href="s10.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
+    <div class="snow"></div>
     <header>
-        <h1>Добро пожаловать на Аниме Сайт</h1>
-        <nav>
-            <ul>
-                <li><a href="#anime">Аниме</a></li>
-                <li><a href="#about">О нас</a></li>
-                <li><a href="#contact">Контакты</a></li>
-            </ul>
-        </nav>
+        <h1 class="title">Добро пожаловать в мир Аниме!</h1>
     </header>
 
-    <main>
-        <section id="anime">
-            <h2>Популярные Аниме</h2>
+    <div class="container">
+        <div class="button-container">
+            <button id="toggleButton">Переключиться на вход</button>
+        </div>
 
-            <div class="anime-info">
-                <img src="anime1.jpg" alt="Аниме 1" class="anime-image">
-                <div class="anime-content">
-                    <div class="anime-description">
-                        <h2>Название Аниме 1</h2>
-                        <p>Описание аниме 1. Здесь вы можете добавить краткое содержание или интересные факты об аниме.</p>
-                    </div>
-                </div>
+        <div id="authForm">
+            <div id="registration-form-container">
+                <h2>Регистрация</h2>
+                <form id="registration-form">
+                    <input type="text" id="username" placeholder="Логин" required>
+                    <input type="email" id="email" placeholder="Электронная почта" required>
+                    <input type="password" id="password" placeholder="Пароль" required>
+                    <input type="password" id="confirmPassword" placeholder="Повторите пароль" required>
+                    <button type="submit">Зарегистрироваться</button>
+                    <p id="errorMessage" style="color: red;"></p>
+                </form>
             </div>
 
-            <div class="anime-info">
-                <img src="anime2.jpg" alt="Аниме 2" class="anime-image">
-                <div class="anime-content">
-                    <div class="anime-description">
-                        <h2>Название Аниме 2</h2>
-                        <p>Описание аниме 2. Здесь вы можете добавить краткое содержание или интересные факты об аниме.</p>
-                    </div>
-                </div>
+            <div id="login-form-container" style="display: none;">
+                <h2>Вход</h2>
+                <form id="login-form">
+                    <input type="text" id="login-username" placeholder="Логин" required>
+                    <input type="password" id="login-password" placeholder="Пароль" required>
+                    <button type="submit">Войти</button>
+                    <p id="loginErrorMessage" style="color: red;"></p>
+                </form>
             </div>
+        </div>
 
-            <div class="anime-info">
-                <img src="anime3.jpg" alt="Аниме 3" class="anime-image">
-                <div class="anime-content">
-                    <div class="anime-description">
-                        <h2>Название Аниме 3</h2>
-                        <p>Описание аниме 3. Здесь вы можете добавить краткое содержание или интересные факты об аниме.</p>
-                    </div>
-                </div>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <p>Вы не зарегистрированы! Пожалуйста, зарегистрируйтесь для доступа к системе.</p>
             </div>
-
-            <div class="video-player">
-                <h2>Смотрите трейлеры</h2>
-                <iframe src="https://www.youtube.com/embed/your-video-id" allowfullscreen></iframe>
-            </div>
-        </section>
-
-        <section id="about" class="about">
-            <h2>О нас</h2>
-            <p>Мы - команда аниме-энтузиастов, которые хотят делиться своим увлечением с другими. Здесь вы найдете информацию о лучших аниме, новинках и классике жанра.</p>
-        </section>
-
-        <section id="contact" class="contact">
-            <h2>Контакты</h2>
-            <p>Если у вас есть вопросы или предложения, вы можете связаться с нами по электронной почте: <a href="mailto:info@anime-site.com">info@anime-site.com</a>.</p>
-        </section>
-    </main>
+        </div>
+    </div>
 
     <footer>
-        <p>&copy; 2023 Аниме Сайт. Все права защищены.</p>
+        &copy; 2023 Anime МИР.
     </footer>
 </body>
 </html>

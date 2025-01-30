@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Профиль пользователя</title>
+    <link rel="stylesheet" href="styles3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header class="navbar">
+            <h1 class="site-title">Профиль - <span id="welcomeUsername"></span>!</h1>
+            <nav>
+                <ul>
+                    <li><a href="main.html">Главная страница</a></li>
+                    <li><a href="#" id="logout">
+                        <img src="https://discords.com/_next/image?url=https%3A%2F%2Fcdn.discordapp.com%2Femojis%2F954951442282737698.png%3Fv%3D1&w=64&q=75" alt="Выход" style="width: 22px; height: 22px;">
+                    </a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="divider"></div>
+
+        <main>
+            <section class="account-info">
+                <h2>Информация об аккаунте</h2>
+                <p><strong>Gmail:</strong> <span id="emailDisplay"></span></p>
+                <p><strong>Пароль:</strong> <span id="passwordDisplay">********</span> <button id="togglePassword">Показать/Скрыть</button></p>
+                <p><strong>Логин:</strong> <span id="usernameDisplay"></span></p>
+                <p><strong>Количество раз входов в систему:</strong> <span id="loginCount">0</span></p>
+            </section>
+
+            <section class="security-warning">
+                <h2>Предупреждение о безопасности</h2>
+                <p>Берегите свой аккаунт от мошенников. Никогда не делитесь своими личными данными и паролями с третьими лицами.</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2023 Ваш сайт о аниме. Все права защищены.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

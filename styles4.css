@@ -1,0 +1,87 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: linear-gradient(135deg, #1c1c1c, #2c2c2c);
+    color: #fff;
+    animation: fadeIn 1s ease-in;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 2.5em;
+    color: #ff4081; /* Яркий цвет для заголовка */
+}
+
+h2 {
+    color: #00e5ff; /* Цвет для подзаголовков */
+}
+
+.community {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.btn, .comment-btn, .submit-comment {
+    background: #ff4081;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn:hover, .comment-btn:hover, .submit-comment:hover {
+    background: #e91e63; /* Более темный цвет при наведении */
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #444;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+input[type="text"]:focus, textarea:focus {
+    border-color: #ff4081; /* Цвет рамки при фокусе */
+    outline: none;
+}
+
+.discussion {
+    margin: 15px 0;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    animation: slideIn 0.5s ease;
+}
+
+.comment {
+    margin-top: 5px;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+}
+
+.comment-form {
+    margin-top: 10px;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-10px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
